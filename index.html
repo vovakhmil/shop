@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<title></title>
+</head>
+<body ng-controller="mainCtrl">
+<div class="container mycontainer">
+	<div class="row">
+		<div class="panel panel-primary">
+			<div class="panel-heading myheading">
+				{{headingView}}
+				<button class="btn btn-info" ng-click="showAddProduct()" ng-hide="currentView=='addProduct.html'">Додати товар</button>
+			<button class="btn btn-info cartbutton" ng-click="showCard()">
+			<i class="fa fa-shopping-cart fa-lg"></i>
+			Корзина
+			<span class="badge" ng-show="cart.length>0">
+				{{cart.length}}
+			</span></button>
+			</div>
+			<div class="panel-body" ng-include="currentView"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<div class="col-sm-6 col-md-4" ng-repeat="item in products">
+	<div class="thumbnail gallery">
+		<img src="{{item.path}}" alt="Photo isnt download">
+		<div class="caption">
+			<h4>{{item.name}} {{item.model}}</h4>
+			<p>{{item.category}}</p>
+			<h4>{{item.price}} Грн.</h4>
+			<button class="btn btn-success" ng-click="addProductCard(item)">
+			<i class="fa fa-shopping-cart fa-lg"></i>
+			Buy
+			</button>
+		</div>
+	</div>	
+</div>
